@@ -36,6 +36,9 @@ test('Ceasar cipher', () => {
     expect(caesarCipher('abc', 3)).toMatch('def');
     expect(caesarCipher('Hello, World!', 3)).toMatch('Khoor, Zruog!');
     expect(caesarCipher('xyz', 3)).toMatch('abc');
+    expect(caesarCipher("HeLLo", -3)).toMatch("EbIIl");
+    expect(caesarCipher("abc", 6)).toBe("ghi");
+    expect(caesarCipher("def", -3)).toBe("abc");
 });
 
 test('Checks uppercase', () => {
