@@ -46,5 +46,3 @@ export function analyzeArray(arr) {
 
     return { average, min, max, length: arr.length };
 }
-
-console.log(analyzeArray([1,8,3,4,2,6]));
