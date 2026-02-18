@@ -17,10 +17,9 @@ export const calculator = {
 export function caesarCipher(str, rot) {
     const alpha = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
-    return str.split('').map((char, i) => {
-        let ch = translate(str, alpha, rot)[i];
-        return isUpperCase(char) ? ch.toUpperCase() : ch;
-    }).join('');
+    return str.split('').map((char, i) => isUpperCase(char) ? 
+        translate(str, alpha, rot)[i].toUpperCase() : 
+        translate(str, alpha, rot)[i]).join('');
 }
 
 export function isUpperCase(char) {
